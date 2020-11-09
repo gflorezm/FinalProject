@@ -1,0 +1,98 @@
+---
+title: "Reproducible templates"
+subtitle: "Final project"
+author: "Guillermo L. Florez-Montero, M.Sc."
+date: "09/11/2020"
+output:
+  ioslides_presentation:
+        widescreen: true
+        logo: images/Rlogo.png
+        css: style.css
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+```
+
+
+
+## About the course
+
+This is the final project of the Coursera course [Reproducible templates for analysis and dissemiation](https://www.coursera.org/learn/reproducible-templates-analysis/). Here I will show some of the skills that I have developed during the course.
+
+
+## About the course
+
+This is the final project of the Coursera course [Reproducible templates for analysis and dissemiation](https://www.coursera.org/learn/reproducible-templates-analysis/). Here I will show some of the skills that I have developed during the course.
+
+
+I am particularly excited because thanks to the course, I started preparing all my reports in R Markdown.
+
+
+## Skills 
+
+**To produce pdf and html documents**
+
+- Customize the text and headers, bold, italics, etc
+- Work with templates
+- Enter plots, tables, code chunks and images
+- Keep a workflow with version control using git and github
+- Manage references and bibliography styles
+
+## A plot of the `pressure` dataset
+
+I have used the ggplot system to create a plot
+
+```{r pressure}
+ggplot2::ggplot(data = pressure, aes(x = temperature, y = pressure)) + 
+      geom_line(colour = "#003333", size = 1.5) +
+      theme_bw() +
+      labs(y = "Pressure", x = "Temperature") +
+      theme(panel.grid = element_blank(),
+            axis.title = element_text(size = 14, colour = "black", 
+                                      face = "bold"))
+```
+
+## A table
+
+This is an example of a table made with the `knitr::kable()` function
+
+<div align="center">
+```{r cars}
+knitr::kable(head(cars), format = "html", col.names = c("SPEED", "DISTANCE"), align = "c")
+```
+</div>
+
+## Some tools
+
+Mani of the customizations of this presentations were made using a css style document. For example:
+
+```
+slides > slide.title-slide hgroup h1 {
+    color: #003333;
+}
+
+slides > slide.title-slide p {
+  color: #1f2023;
+}
+
+slides > slide.title-slide hgroup h2 {
+  color: #1f2023;
+}
+
+```
+
+I have used this code to change the colors of the title, subtitle and text of the first slide.
+
+
+## Source
+
+Thank you very much!
+
+I really recommend to take the Course of Reproducible templates.
+
+If you want to see the codes to generate this presentation, please visit my [github page](https://github.com/gflorezm/FinalProject).
+

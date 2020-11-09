@@ -1,0 +1,52 @@
+slides > slide.title-slide hgroup h1 {
+    color: #003333;
+}
+
+slides > slide.title-slide p {
+  color: #1f2023;
+}
+
+slides > slide.title-slide hgroup h2 {
+  color: #1f2023;
+}
+
+
+h2 {
+      color: #003333;
+}
+
+
+p {
+      color: #1f2023;
+      font-family: Arial;
+      font-size: 18;
+}
+
+ul {
+      color: #1f2023;
+      font-family: Arial;
+      font-size: 17;
+}
+
+table {
+  font-family: Arial;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td, th {
+  border: 1px solid;
+}
+
+td {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      color: #1f2023;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: black;
+    background-color: #f2f2f2;
+}
